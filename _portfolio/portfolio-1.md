@@ -1,6 +1,6 @@
 ---
 title: "University campus"
-excerpt: "University campus for engineering students<br/><img src='campus.jpg'>"
+excerpt: "University campus for engineering students<br/> <img src='/images/campus.jpg'>"
 collection: portfolio
 ---
 
