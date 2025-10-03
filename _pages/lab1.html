@@ -8,6 +8,77 @@ redirect_from: /lab1/
 <!-- _pages/lab1.html -->
 
 <style>
+    /* Chessboard base styling */
+#chessboard {
+  border-collapse: collapse;
+  margin: 2vw auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+#chessboard:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive square sizes */
+#chessboard td {
+  width: 5vw;
+  height: 5vw;
+  min-width: 30px;
+  min-height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 1vw;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #222;
+  position: relative;
+}
+
+/* Alternating dark and light squares */
+#chessboard tr:nth-child(even) td:nth-child(odd),
+#chessboard tr:nth-child(odd) td:nth-child(even) {
+  background-color: #444;
+  color: white;
+}
+#chessboard tr:nth-child(even) td:nth-child(even),
+#chessboard tr:nth-child(odd) td:nth-child(odd) {
+  background-color: #eee;
+  color: black;
+}
+
+/* Hover effect */
+#chessboard td:hover {
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
+  cursor: pointer;
+  background-color: gold !important;
+  color: black;
+}
+
+/* Focus effect (keyboard navigation) */
+#chessboard td:focus {
+  outline: 3px solid crimson;
+  outline-offset: -3px;
+}
+
+/* High contrast accessibility mode */
+@media (prefers-contrast: more) {
+  #chessboard td {
+    border: 2px solid black;
+  }
+  #chessboard tr:nth-child(even) td:nth-child(odd),
+  #chessboard tr:nth-child(odd) td:nth-child(even) {
+    background-color: black;
+    color: white;
+  }
+  #chessboard tr:nth-child(even) td:nth-child(even),
+  #chessboard tr:nth-child(odd) td:nth-child(odd) {
+    background-color: white;
+    color: black;
+  }
+}
+
 </style>
 
 <table id='sakktabla' cellspacing=0>
