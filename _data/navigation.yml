@@ -12,7 +12,7 @@ main:
     url: /portfolio/
 
   - title: "Chess table"
-    url: /lab1.html
+    url: lab1.html
 
   - title: "Blog Posts"
     url: /year-archive/
