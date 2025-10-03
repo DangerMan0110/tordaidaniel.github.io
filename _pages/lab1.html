@@ -61,23 +61,6 @@ author_profile: true
   outline-offset: -3px;
 }
 
-/* High contrast accessibility mode */
-@media (prefers-contrast: more) {
-  #chessboard td {
-    border: 2px solid black;
-  }
-  #chessboard tr:nth-child(even) td:nth-child(odd),
-  #chessboard tr:nth-child(odd) td:nth-child(even) {
-    background-color: black;
-    color: white;
-  }
-  #chessboard tr:nth-child(even) td:nth-child(even),
-  #chessboard tr:nth-child(odd) td:nth-child(odd) {
-    background-color: white;
-    color: black;
-  }
-}
-
 </style>
 
 <table id='chessboard' cellspacing=0>
